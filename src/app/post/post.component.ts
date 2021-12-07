@@ -6,7 +6,7 @@ import {Post} from '../posts.service';
     selector: 'app-post',
     templateUrl: './post.component.html',
     styleUrls: ['./post.component.scss']
-})
+});
 export class PostComponent implements OnInit {
     post: Post;
 
@@ -15,11 +15,10 @@ export class PostComponent implements OnInit {
         private router: Router
     ) {
     }
-
     ngOnInit() {
         this.route.data.subscribe((data) => {
             this.post = data.post
-        })
+        });
     }
 
     loadPost() {
